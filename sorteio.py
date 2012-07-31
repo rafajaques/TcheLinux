@@ -29,11 +29,11 @@ print "Seja bem vindo ao sorteio de brindes do TcheLinux"
 
 # Verifica nomes duplicados
 if (len(galera) != len(set(galera))):
-	print("\n-> ERRO! Algum(a) safadinho(a) se cadastrou duas vezes!\n")
+	print "\n-> ERRO! Algum(a) safadinho(a) se cadastrou duas vezes!\n"
 	exit()
 
 print "Uma vez sorteado, seu nome não será mostrado novamente.\n"
-print "Existem "+str(len(galera))+" pessoas na lista do sorteio! Bora lá?\n"
+print "Existem {0} pessoas na lista do sorteio! Bora lá?\n".format(len(galera))
 
 while galera:
 	# Prompt para sorteio
@@ -42,7 +42,7 @@ while galera:
 	if sortearMais == "s":
 		# Nome do sorteado
 		sorteado = random.choice(galera)
-		print("\n-> E a pessoa sortuda é: {0}\n".format(sorteado))
+		print "\n-> E a pessoa sortuda é: {0}\n".format(sorteado)
 		
 		# Tira da lista
 		galera.remove(sorteado)
@@ -51,4 +51,4 @@ while galera:
 		exit()
 		
 # Se ao sair do loop a lista estiver vazia, avisa que não existe mais o que sortear
-print("Todas as pessoas já foram sorteadas.")
+print "Todas as pessoas já foram sorteadas."
