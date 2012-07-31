@@ -42,7 +42,7 @@ while galera:
 	if sortearMais == "s":
 		# Nome do sorteado
 		sorteado = random.choice(galera)
-		print("\n-> E a pessoa sortuda é: "+sorteado+"\n")
+		print("\n-> E a pessoa sortuda é: {0}\n".format(sorteado))
 		
 		# Tira da lista
 		galera.remove(sorteado)
