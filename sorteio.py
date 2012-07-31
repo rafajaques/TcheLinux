@@ -37,18 +37,15 @@ print "Existem {0} pessoas na lista do sorteio! Bora lá?\n".format(len(galera))
 
 while galera:
 	# Prompt para sorteio
-	sortearMais = raw_input("Sortear mais um [s/n]? ")
-	
-	if sortearMais == "s":
-		# Nome do sorteado
-		sorteado = random.choice(galera)
-		print "\n-> E a pessoa sortuda é: {0}\n".format(sorteado)
-		
-		# Tira da lista
-		galera.remove(sorteado)
-		
-	else:
+	if raw_input("Sortear mais um [s/n]? ") != "s":
 		exit()
+
+	# Nome do sorteado
+	sorteado = random.choice(galera)
+	print "\n-> E a pessoa sortuda é: {0}\n".format(sorteado)
+	
+	# Tira da lista
+	galera.remove(sorteado)
 		
 # Se ao sair do loop a lista estiver vazia, avisa que não existe mais o que sortear
 print "Todas as pessoas já foram sorteadas."
